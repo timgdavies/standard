@@ -1,0 +1,83 @@
+---
+layout: default
+title: Research report
+---
+
+<div class="page-header">
+    Document status: final<br/>
+      Last updated: Feb 23rd 2014
+    <h1 id="overview" class="page-header">360 Giving Data Standard: Research process</h1>
+    
+    Document status: final<br/>
+    Last updated: Feb 23rd 2014 
+    
+    
+    <p>
+        On June 20th 2013, Fran and William Perrin of the <a href="http://www.indigotrust.org.uk">Indigo Trust</a> convened <a href="http://threesixtygiving.com/2013/06/24/meeting-hosted-by-indigo-trust-on-20-june-2013/">a workshop to discuss open data, philanthropy and grant making</a>. At that workshop, the need to identify a data standard for sharing information on UK trust and foundation activities was discussed. As a result of those discussions, <a href="http://www.nominettrust.org">Nominet Trust</a> and <a href="http://www.indigotrust.org.uk">Indigo Trust</a> sponsored a small-scale research and development project, led by Practical Participation, to explore:
+        <ul>
+            <li>Existing supply of data from UK trusts and foundations</li>
+            <li>Potential demand for trust and foundation grantmaking data</li>
+            <li>Existing standards</li>
+        </ul>
+        And, as a result of this exploration, to develop and initial prototype data standard. The goal of this research was to provide a starting point for further discussion, rather than a comprehensive survey of all available data, and all standardisation issues. 
+    </p>
+    
+    <h2>Supply side research</h2>
+    <p>
+        We explored the availability of data from a range of different size trusts and foundations, looking at: Arcadia Fund, Big Lottery Fund, Lloyds Bank Foundation, Indigo Trust, Nominet Trust, Wellcome Trust and Wyndham Trust
+    </p>
+    <p>
+        This research pointed to the limited existing standardisation between data systems of trusts and foundations. Unlike the government Aid Sector which has seen standards imposed by external bodies like the OECD Development Assistance Committee, there are few external standards on reporting grant-level information that UK trusts and foundations have to comply with. As a result, only five core fields could be found across all the organisations surveyed:
+        <ul>
+            <li>Date (or Start Date and End Date)</li>
+            <li>Description</li>
+            <li>Amount</li>
+            <li>Currency</li>
+            <li>Recipient organisation name</li>
+        </ul>
+    Where organisations are already publishing data, they tend to do so in flat formats, with the exception of Indigo trust who are <a href="http://iatiregistry.org/dataset/indtrust-activities">publishing to the IATI Standard in XML</a>.
+    </p>
+    <p>
+        A full report of this <a href="https://docs.google.com/document/d/1saKwe2DtyEOz0JQxzCuw5neZCYxxRLx7LtjWyw4RiBU/edit#">supply side research is available here</a>. 
+    </p>
+    
+    <h2>Demand side workshop</h2>
+    <p>
+        To understand the potential demand for open data on philanthropic grant making we hosted a workshop, using user-centred design methods to explore the potential users, and use-cases, for this data. <a href="https://docs.google.com/document/d/1bof0cK4fMsqJqN43EBcve70OreuH7XlkgluULzuUHAU/edit#heading=h.m862xj13c1m0">A full report from the workshop is available here</a>. 
+    </p>
+    <p>
+        The workshop generated prioritised lists of desirable data fields for a standard to cover, and most of these are covered by the draft. However, many of the use cases identified wanted to make use of <strong>common sectoral classifications</strong> for grants. Our supply side review found little evidence of common taxonomies or schema in use. Identifying common taxonomies that might be used in the sector remains an outstanding challenge and research problem. 
+    </p>
+
+    <h3>Standardisation research and prototype</h3>
+    
+    <p>
+        We looked at a range of existing domain-specific data standards, such as the <a href="http://foundationcenter.org/grantmakers/e-grants">Foundation Center eGrant standard</a>, the <a href="http://www.iatistandard.org">International Aid Transparency Initiative standard</a> and emerging work on a <a href="http://drsinitiative.org/">Canadian domestic reporting standard</a>. We also explored various technical standardisation options, including <a href="http://www.schema.org">Schema.org microdata</a>, <a href="http://en.wikipedia.org/wiki/XML">XML</a> data models, <a href="http://jenit.github.io/linked-csv/">Linked CSV</a>, <a href="https://developers.google.com/public-data/">Dataset Publishing Language</a>, <a href="http://dataprotocols.org/simple-data-format/">Simple Data Format</a>, <a href="http://json-schema.org">JSON Schema</a> and <a href="http://json-ld.org/">JSON-LD</a>.
+    </p>
+    <p>
+        Our primary concern was providing a <a href="http://www.timdavies.org.uk/2014/01/08/joined-up-philanthropy-simplicity-and-depth/">simple, but expressive, data standard</a> that allows non-technical users to create and work with data, whilst also maximising the potential for easily integrating data from the standard with other systems - such as the Aid Data available through IATI, or the international data available through the Foundation Center's eGrant data.
+    </p>
+    <p>
+        The result of prototyping work is a 'Joined Up Philanthropy' data model, built <a href="http://webprotege.stanford.edu/#Edit:projectId=3a8686e4-321f-4894-b66c-9e18d82cb1d5">as an RDF Schema ontology</a> which sets out a set of common building blocks for reporting information on grants. This ontology is then transformed by a set of scripts into a flattened spreadsheet format
+    </p>
+    <p>
+        In a future phase of work we plan to also develop a transformation of the ontology/data model into a JSON structure, which can also be marked up via JSON-LD syntax to become full Linked Open Data. It should be possible to convert between these different formats. You can <a href="{{site.baseurl}}research/implementation.html">read more about the implementation of the data model and the design choices here</a>.  
+    </p>
+    <p>
+       The data model has been designed to map as closely as possible to Schema.org data types and properties, IATI data structures, and eGrant fields. Further work to test this mapping is required in future phases of development. 
+   </p>
+   <p>
+       You can find the latest version of the <a href="https://docs.google.com/spreadsheet/ccc?key=0ApqzJROt-jZ0dDdKN2pIWlRfdXNfYjFuVUo5SWwtcXc&usp=drive_web#gid=0">prototype data standard spreadsheet template here</a>, and <a href="https://github.com/ThreeSixtyGiving/prototype-tools">scripts used to generate it on GitHub</a>.
+   </p>
+        
+   <h3>Where next?</h3>
+   <p>
+       The initial stage of research and development is now complete. The next stage is to start testing the prototype standard template with live data.
+   </p>        
+   <p>
+       To keep in touch with future developments of the project, sign up at <a href="http://www.threesixtygiving.com">the main Three Sixty Giving website</a>.
+   </p>
+   <p>~<a href="http://www.timdavies.org.uk">Tim Davies</a>, <a href="http://www.practicalparticipation.co.uk">Practical Participation</a>, Feb 2014</p>
+    
+</div>
+        

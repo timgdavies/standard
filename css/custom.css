@@ -21,3 +21,14 @@ ul {
 .rowtype-reference {
     background-color: #d9edf7;
 }
+
+.body-text {
+    margin:10px;
+}
+
+.bs-docs-footer {
+    text-align: center;
+    border-top: 1px lightgrey solid;
+    padding: 40px;
+    height: 120px;
+}

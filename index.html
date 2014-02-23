@@ -3,13 +3,189 @@ layout: default
 title: 360 Giving Data Standard
 ---
 
-This page will shortly contain instructions for creating your own data files using the draft 360 Giving Data Standard. For now, you can find <a href="{{site.baseurl}}research/implementation.html">documentation of the design decisions for the standard</a>.
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="jumbotron">
+        <h2>360 Giving Data Standard (prototype)</h2>
+        <p class="lead"><a href="http://threesixtygiving.com/">The 360 Giving project</a> has set out a five-year ambition for open philanthropy in the UK: to see trusts and foundations reporting on the grants they give - supporting more informed, effective and transparent grant making across the country.</p>
+        <p>
+        To help join up grant information from different trusts and foundations, <a href="{{site.baseurl}}research/">we've been developing</a> a prototype data standard. 
+        </p>
+        <p>
+        Over the first half of 2014, we need your help to test it out. Get a copy of the template, and then check out the guidance to present your grants data in the 360 Giving format. 
+        </p>
+        <p><a class="btn btn-lg btn-primary" href="https://docs.google.com/spreadsheet/ccc?key=0ApqzJROt-jZ0dDdKN2pIWlRfdXNfYjFuVUo5SWwtcXc&usp=drive_web&newcopy=1" role="button">Get the template</a></p>
+
 </div>
+    
+<div class="body-text">
+    <h1>Using the prototype</h1>
+      
+     <h2>1. Get registered</h2>
+
+     <p>To publish 360 Giving data you will need a unique ID. You can <a href="https://docs.google.com/forms/d/1yNipROOVkKMsQUOeTclbcjWFwEL44xhQWIQtfhl8NGQ/viewform?entry.938942533&entry.735777811&entry.1667435820&entry.1204168197&entry.1889238409=360G-&entry.324136337" target="_blank">register to choose your 360G ID here</a>.</p>
+     
+     <p>If you register then we'll also be able to keep you updated with the development of the standard, and to invite you to share your feedback at key points in the coming months. </p>
+
+     <h2>2. Many a copy of the template spreadsheet</h2>
+
+     <p>We've prepared a simple spreadsheet template, ideal if you have between 10s and 1000s grants to describe. </p>
+
+     <p>You can download a copy in <a href="https://docs.google.com/spreadsheet/pub?key=0ApqzJROt-jZ0dDdKN2pIWlRfdXNfYjFuVUo5SWwtcXc&output=xls" target="_blank">Excel format</a> for working offline, but the easiest way to keep your 360 Giving data updated is to <A href="https://docs.google.com/spreadsheet/ccc?key=0ApqzJROt-jZ0dDdKN2pIWlRfdXNfYjFuVUo5SWwtcXc&usp=drive_web&newcopy=1">make a copy of the Google Spreadsheet version of the template</a>, and save it in your Google Drive account. </p>
+
+     <p>The Google Spreadsheet copy is pre-configured to help you create valid date.</p>
+
+     <p>If you have more than a few thousand grants to publish details of then get in touch for advice on how best to create your data. </p>
+
+     <h2>3. Read the guidance</h2>
+
+     <p>There are a few important things you need to know about using the prototype standard template - read on below:</p>
+
+
+
+     <div class="panel panel-primary">
+       <div class="panel-heading">A. A Simple summary, or in-depth details</div>
+       <div class="panel-body">
+
+          <p>The 360 Giving Data standard has been designed to let you share as much or as little data as you have.</p> 
+
+          <p>You will see the that the template consists of a number of sheets (look for the tabs along the bottom). You can describe all the basic facts about your grants on the 'Activity' tab.</p>
+          
+          <p>You don't need to fill in all the fields, but the more you can complete the better.</p>
+          
+          <p>Sometimes you might not have the data in your existing systems, because it is implicit (e.g. if you only give grants in the UK, then the country column would always be 'United Kingdom') - but try to make these things explicit in the data you share. You <strong>must</strong> also make sure you give identifiers to the grants in your data. </p>
+
+          <p>If you find you have extra details to share about a grant that don't fit on the basic Activity tab, then the other tabs are there for this: and let you express lots of extra details about your grants. </p>
+
+          <p>For example, if the beneficiaries of a grant are located in lots of different locations rather than one place, you can go to the Locations tab. Here, you would:
+          <ul>
+              <li>Add the 'Activity ID' of the grant these beneficiary locations relate to;</li>
+              <li>Select 'beneficiaryLocation' as the relationship type; and</li>
+              <li>Fill in details of the location.</li>
+         </ul>
+         In other words, this location is related to the grant as a 'beneficiaryLocation'. You can <em>add as many locations related to a single activity as you need</em>. The same thing works for related documents, events (like planned and actual dates of an activity), and financial transactions. </p>
+
+          </div></div> 
+            
+     <div class="panel panel-primary">
+       <div class="panel-heading">B. Understanding identifiers</div>
+       <div class="panel-body">
+     <p>You might usually refer to your grants by name: but computers find it a lot easier to match things together with IDs, particularly when combining data from different systems. Identifiers </p>
+
+     <p>There are two kinds of identifier used in the standard:</p>
+
+     <ul>
+     <li>Your own identifiers</li>
+     <li>Shared identifiers</li>
+     </ul>
+
+     <h4>Your own IDs</h4>
+
+     <p>Your own identifiers are the ones that you make up, or that come from your internal systems. For example, you might number your grants each year, giving them identifiers like 2013-01, 2013-02 and so-on. </p>
+
+     <p>Whenever you are using an Internal Identifier, you need to prefix it your 360G identifier, followed by ":". For example, if your 360G identifier was '360G-indigo' and you have a grant known in your internal system as 'IND123, it's Activity identifier would be: '360G-indigo:IDN123'.</p>
+
+     <p>As a rule of thumb, if you are wholly responsible for it (a grant, a document, an event etc.) then you get to decide on the ID - and just need to add your 360G prefix to it</p>
+
+     <p>Note: identifiers should not include spaces, or special characters. Replace these with - (dash)</p>
+
+     <p>Tip: You might find it useful to let your grantees know the 360G identifier you have given to their project. This identifier is likely to be unique online, so if you ask them to include it in project documents somewhere, or when they mention the funding you have given, then you will be able to search the web and more easily find online documents related to this funding if any are available. </p>
+
+     <h4>Shared identifiers</h4>
+
+     <p>Shared identifiers are mainly used for referring to organisations. Most organisations have been assigned an official registration number, so making use of this helps to join up data between different systems.</p>
+
+     <p>Of course, there are different kinds of registration number: you might give money to charities, companies and Universities, all of which have different registration bodies and identifiers. So shared organisation identifiers also have a prefix to indicate who the registration body is.</p>
+
+     <p>We're using the International Aid Transparency Initiative standard for organisation identifiers. You can <a href="http://practicalparticipation.github.io/organisation-id-tool/">find a tool here</a> which will help you work out the organisation identifiers to use.</p>
+
+     <p>(Tip, the prefix for UK charities is 'GB-CHC-' and for UK companies is 'GB-COH-').</p>
+
+     <p>If you have not recorded charity numbers, company numbers or some other official identifier for your grantees - don't worry. The Organisation ID tool will point you to where you can look these up if you only have a small number of grants, or there are automated look up tools available if you have lots of grantees to find IDs for. </p>
+
+     <p>As a temporary measure you can also generate your own internal IDs if you need to (e.g. 360G-indigo:temp<em>org</em>01).</p>
+ </div>
+</div>
+
+     
+     <div class="panel panel-primary">
+  <div class="panel-heading">C. Dates</div>
+  <div class="panel-body">
+
+     <p>In the US dates are normally written month/day/year. In the UK we write them day/month/year. That gets confusing when combining data from different places (Is 02/05/2014 in February or May? A computer can't easily tell). </p>
+
+     <p>To avoid confusion the 360 giving standard uses the 'year-month-day' format for writing dates. For example 2014-02-01 to describe the 1st February 2014. </p>
+
+     <p>The dates you in your systems might not be in this format, but don't worry - it's easy to convert them. In Google Spreadsheets the formula '=Text(R2,"yyyy-mm-dd")', where R2 is a cell containing a date in another format, will get dates into the right format for you (check carefully whether the spreadsheet properties are set to the right one of US or UK date formats when doing this).</p>
+
+     </div></div>   <div class="panel panel-primary">
+  <div class="panel-heading">D. Add columns if you need - but don't rename the defaults</div>
+  <div class="panel-body">
+
+     <p>We've tried to name all the columns in as intuitive a way as possible. It's really important that you don't change the name of any of the columns in the spreadsheet template. There will be detailed descriptions of each column available here soon.</p>
+
+     <p>However, you can add extra columns if you need. Just start their name with 'Internal' and then whatever you want. For example, if you want to make updating your data easier by having somewhere to paste in the IDs you use for grants, and then have a formula make the Activity ID with your prefix, that's absolutely fine. Tools that use the data should just ignore those extra columns. </p>
+
+     <p>You can also change the order of columns, and hide the ones you don't need. Just don't delete them completely, and again, don't change their names! </p>
+
+     </div></div>   <div class="panel panel-primary">
+  <div class="panel-heading">E. Classifications and vocabularies</div>
+  <div class="panel-body">
+
+     <p>There are lots of different ways you might want to classify your grants. Right now, the 360 Giving standard does not provide a core set of codelists or classifications, but instead lets you flexibly use the classifications you already have (for example, if you divide your grants into 'arts', 'sports' and so-on).</p>
+
+     <p>Classifications are made up of:</p>
+
+     <ul>
+     <li>A vocabulary</li>
+     <li>A code</li>
+     <li>An optional title and description</li>
+     </ul>
+
+     <h4>Vocabularies</h4>
+
+     <p>A vocabulary is the list of valid codes. For example, the US <a href="http://foundationcenter.org/ntee/">National Taxonomy of Exempt Entities</a> (NTEE) is a vocabulary that provides a list of valid codes, ranging from A20 for 'Arts and cultural orgnaisations' through Z for 'Not elsewhere clasified'</p>
+
+     <p>Vocabularies can either be shared identifiers, or internal to your organisation.</p>
+
+     <p>For internal vocabularies, prefix a vocabulary identifiers with your 360G Id. For example '360G-indigo:programArea' </p>
+
+     <p>360G will soon maintain a list of recognised vocabularies, and their identifiers, such as 360G:NTEE for the National Taxonomy of Exempt entities that has been mentioned.</p>
+
+     <p>A special vocabulary of 360G:TAGS can be used for free-tagging</p>
+
+     <h4>Codes</h4>
+
+     <p>Codes should be a short identifier for this category, with no spaces or other special characters. </p>
+
+     <p>If you don't currently have codes for the categories you use (e.g. you just refer to them by name) you could add a new tab to the spreadsheet to start building up your own codelist. Add columns for 'Vocabulary', 'Code', 'Title' and list each code on it's own line. You can then use this to lookup codes in future. </p>
+
+     <h4>What are you classifying?</h4>
+
+     <p>You will notice the classification sheet has space for 'Organsation ID', 'Activity ID', 'Document ID' and so-on. That's because all these different kinds of things can be classified and categorised. Just fill in the relevant one for the thing you are classifying and leave the others blank.</p>
+
+ 
+This page will shortly contain instructions for creating your own data files using the draft 360 Giving Data Standard. For now, you can find <a href="{{site.baseurl}}research/implementation.html">documentation of the design decisions for the standard</a>.
+</div></div>
+
+<h2>4. Publish your data </h2>
+
+   <p>When you are satisfied with the data in your spreadsheet, it's time to publish it.</p>
+   
+   <p>If you were using the Google Docs version of the template, you can do this directly by going to the 'File' menu and choosing 'Publish to the web'. Select 'start publishing'. You can get a link to the published version of your data as a CSV file (the Activity sheet only), Excel file (all the sheets), and a web page, to <a href="http://slashopen.net/">share on your website</a>. </p>
+   
+   <p>If you used the Excel version, then you will need to upload this to your website to share. You might like to create a CSV copy as well of the main activities page, using 'File > Save As...'</p>
+   
+   <p>Make sure <a href="{{site.baseurl}}contact.html">you let us know</a> when you have published your data.</p>
+
+   <div class="alert alert-warning">
+           <span class="glyphicon glyphicon-warning-sign"></span> <strong>Think privacy</strong> - Remember, before you publish any data, you should check carefully to make sure you are not revealing any personal information about your grantees that you do not have permission to publish. This data should be complete removed from the spreadsheet you publish (not just in hidden columns or background sheets). 
+       </div>
+
+<h2>5. Keep in touch </h2>
+
+<p>As 360 Giving Data becomes available we're planning to create a range of example tools that show what can be done by bringing all this data together. If you registered then we'll be in touch to let you know when these become available.</p>
+
+<p>We also would love to hear your feedback on whether or not the 360 Giving standard works for you. You can <a href="{{site.baseurl}}contact.html">contact us</a> or, you can <a href="https://github.com/ThreeSixtyGiving/standard/issues">add a suggestion to our issue tracker here</a>.
+
+</div>
+
