@@ -1,6 +1,7 @@
 <ul>
 <li><a href='#Activity'>Activity</a></li>
 <li><a href='#Classification'>Classification</a></li>
+<li><a href='#Documents'>Documents</a></li>
 <li><a href='#Event'>Event</a></li>
 <li><a href='#Location'>Location</a></li>
 <li><a href='#Organization'>Organization</a></li>
@@ -44,10 +45,130 @@
 <td>Text</td>
 </tr>
 <tr class='rowtype-text'>
+<td>fundingOrganization.id</td>
+<td>Funding Org:Identifier</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>fundingOrganization.name</td>
+<td>Funding Org:Name</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipientOrganization.id</td>
+<td>Recipient Org:Identifier</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipientOrganization.name</td>
+<td>Recipient Org:Name</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
 <td>currency</td>
 <td>Currency</td>
 <td>-</td>
 <td>Text</td>
+</tr>
+<tr class='rowtype-entity'>
+<td>sum(applicationTransaction)</td>
+<td>Total Amount applied for</td>
+<td>-</td>
+<td>Entity</td>
+</tr>
+<tr class='rowtype-entity'>
+<td>sum(commitmentTransaction)</td>
+<td>Total Amount awarded</td>
+<td>-</td>
+<td>Entity</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipientOrganization.streetAddress</td>
+<td>Recipient Org:Street Address</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipientOrganization.addressLocality</td>
+<td>Recipient Org:City</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipientOrganization.addressRegion</td>
+<td>Recipient Org:County/State</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipientOrganization.postalCode</td>
+<td>Recipient Org:Postal Code</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipientOrganization.addressCountry</td>
+<td>Recipient Org:Country</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipientOrganization.alternateName</td>
+<td>Recipient Org:Alternate Name</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipientOrganization.description</td>
+<td>Recipient Org:Description</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-datetime'>
+<td>plannedDates.startDate</td>
+<td>Planned Dates:Start Date</td>
+<td>-</td>
+<td>DateTime</td>
+</tr>
+<tr class='rowtype-text'>
+<td>plannedDates.duration</td>
+<td>Planned Dates:Duration</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-datetime'>
+<td>plannedDates.endDate</td>
+<td>Planned Dates:End Date</td>
+<td>-</td>
+<td>DateTime</td>
+</tr>
+<tr class='rowtype-text'>
+<td>beneficiaryLocation.name</td>
+<td>Beneficiary Location:Name</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>beneficiaryLocation.countryCode</td>
+<td>Beneficiary Location:Country Code</td>
+<td>Should be a valid ISO Country code.</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-number (float)'>
+<td>beneficiaryLocation.latitude</td>
+<td>Beneficiary Location:Latitude</td>
+<td>-</td>
+<td>Number (float)</td>
+</tr>
+<tr class='rowtype-number (float)'>
+<td>beneficiaryLocation.longitude</td>
+<td>Beneficiary Location:Longitude</td>
+<td>-</td>
+<td>Number (float)</td>
 </tr>
 <tr class='rowtype-text'>
 <td>description</td>
@@ -66,6 +187,12 @@
 <td>From an open call?</td>
 <td>-</td>
 <td>Yes/No</td>
+</tr>
+<tr class='rowtype-text'>
+<td>relatedActivity.id</td>
+<td>Related Activity:Identifier</td>
+<td>-</td>
+<td>Text</td>
 </tr>
 <tr class='rowtype-datetime'>
 <td>dateModified</td>
@@ -98,84 +225,6 @@
                 </thead>
                 <tbody>
     
-<tr>
-<td>relatedActivity</td>
-<td>Related Activity</td>
-<td>-</td>
-<td> <a href='#Activity'>Activity (Activity)</a></td>
-</tr>
-<tr>
-<td>fundingType</td>
-<td>Funding Type</td>
-<td>-</td>
-<td> <a href='#Classification'>Classification (Classification)</a></td>
-</tr>
-<tr>
-<td>classifications</td>
-<td>Classifications</td>
-<td>-</td>
-<td> <a href='#Classification'>Classification (Classification)</a></td>
-</tr>
-<tr>
-<td>grantProgramme</td>
-<td>Grant Programme</td>
-<td>-</td>
-<td> <a href='#Classification'>Classification (Classification)</a></td>
-</tr>
-<tr>
-<td>actualDates</td>
-<td>-</td>
-<td>-</td>
-<td> <a href='#Event'>Event (Event)</a></td>
-</tr>
-<tr>
-<td>plannedDates</td>
-<td>Planned Dates</td>
-<td>-</td>
-<td> <a href='#Event'>Event (Event)</a></td>
-</tr>
-<tr>
-<td>beneficiaryLocation</td>
-<td>Beneficiary Location</td>
-<td>-</td>
-<td> <a href='#Location'>Place (Location)</a></td>
-</tr>
-<tr>
-<td>location</td>
-<td>-</td>
-<td>-</td>
-<td> <a href='#Location'>Place (Location)</a></td>
-</tr>
-<tr>
-<td>fundingOrganization</td>
-<td>Funding Org</td>
-<td>-</td>
-<td> <a href='#Organization'>FundingOrganization (Organization)</a></td>
-</tr>
-<tr>
-<td>recipientOrganization</td>
-<td>Recipient Org</td>
-<td>-</td>
-<td> <a href='#Organization'>RecipientOrganization (Organization)</a></td>
-</tr>
-<tr>
-<td>applicationTransaction</td>
-<td>Amount applied for</td>
-<td>-</td>
-<td> <a href='#Transaction'>Application (Transaction)</a></td>
-</tr>
-<tr>
-<td>disbursementTransaction</td>
-<td>Amount paid out</td>
-<td>-</td>
-<td> <a href='#Transaction'>Disbursement (Transaction)</a></td>
-</tr>
-<tr>
-<td>commitmentTransaction</td>
-<td>Amount awarded</td>
-<td>-</td>
-<td> <a href='#Transaction'>Commitment (Transaction)</a></td>
-</tr>
 </tbody></table></div>
        </div>
        </div>
@@ -224,7 +273,7 @@
 <tr class='rowtype-reference'>
 <td>relationshipType</td>
 <td>Relationship Type</td>
-<td>One of: organisationType, classifications, grantProgramme, gazeteerEntry, fundingType</td>
+<td>One of: gazeteerEntry, organisationType, fundingType, grantProgramme, classifications</td>
 <td>Reference</td>
 </tr>
 <tr class='rowtype-text'>
@@ -270,6 +319,82 @@
               </h4>
             </div>
             <div id="related-Classification" class="panel-collapse collapse out">
+              <div class="panel-body"> 
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Relationship</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Related to</th>
+                  </tr>
+                </thead>
+                <tbody>
+    
+</tbody></table></div>
+       </div>
+       </div>
+<h4 class='activity' id='Documents'><span class='glyphicon glyphicon-th'></span> Documents</h4>
+<p>Documents can be attached to activities and other building blocks to provide more information. </p>
+<p><strong>Types:</strong> Document</p>
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-target="#table-Documents">
+              Data properties
+            </a>
+          </h4>
+        </div>
+        <div id="table-Documents" class="panel-collapse collapse out">
+          <div class="panel-body"> 
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title (en)</th>
+                <th>Description</th>
+                <th>Values</th>
+              </tr>
+            </thead><tbody>
+
+<tr class='rowtype-reference'>
+<td>Event.id</td>
+<td>Event ID</td>
+<td>The identifier of a related Event (optional)</td>
+<td>Reference</td>
+</tr>
+<tr class='rowtype-reference'>
+<td>relationshipType</td>
+<td>Relationship Type</td>
+<td>One of: relatedDocument</td>
+<td>Reference</td>
+</tr>
+<tr class='rowtype-text'>
+<td>description</td>
+<td>Description</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-datetime'>
+<td>dateModified</td>
+<td>Last modified</td>
+<td>-</td>
+<td>DateTime</td>
+</tr>
+</tbody></table></div>
+    </div>
+    </div>
+
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-target="#related-Documents">
+                  Relationship properties
+                </a>
+              </h4>
+            </div>
+            <div id="related-Documents" class="panel-collapse collapse out">
               <div class="panel-body"> 
               <table class="table">
                 <thead>
@@ -424,7 +549,7 @@
 <tr class='rowtype-reference'>
 <td>relationshipType</td>
 <td>Relationship Type</td>
-<td>One of: beneficiaryLocation, location</td>
+<td>One of: location, beneficiaryLocation</td>
 <td>Reference</td>
 </tr>
 <tr class='rowtype-text'>
@@ -450,6 +575,18 @@
 <td>Longitude</td>
 <td>-</td>
 <td>Number (float)</td>
+</tr>
+<tr class='rowtype-text'>
+<td>gazeteerEntry.vocabulary</td>
+<td>Gazeteer Entry:Vocabulary</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>gazeteerEntry.code</td>
+<td>Gazeteer Entry:Code</td>
+<td>-</td>
+<td>Text</td>
 </tr>
 <tr class='rowtype-text'>
 <td>description</td>
@@ -488,12 +625,6 @@
                 </thead>
                 <tbody>
     
-<tr>
-<td>gazeteerEntry</td>
-<td>Gazeteer Entry</td>
-<td>-</td>
-<td> <a href='#Classification'>Classification (Classification)</a></td>
-</tr>
 </tbody></table></div>
        </div>
        </div>
@@ -654,24 +785,12 @@
                 </thead>
                 <tbody>
     
-<tr>
-<td>organisationType</td>
-<td>Organisation Type</td>
-<td>-</td>
-<td> <a href='#Classification'>Classification (Classification)</a></td>
-</tr>
-<tr>
-<td>location</td>
-<td>-</td>
-<td>-</td>
-<td> <a href='#Location'>Place (Location)</a></td>
-</tr>
 </tbody></table></div>
        </div>
        </div>
 <h4 class='activity' id='Transaction'><span class='glyphicon glyphicon-th'></span> Transaction</h4>
 <p>A transactions may be attached to an activity, and have a date, type, currency and value. Transactions may be commitments to fund an activity, disbursements of funding, or any other kind of financial transaction. </p>
-<p><strong>Types:</strong> Application, Commitment, Disbursement</p>
+<p><strong>Types:</strong> Disbursement, Application, Commitment</p>
 
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -708,8 +827,20 @@
 <tr class='rowtype-reference'>
 <td>relationshipType</td>
 <td>Relationship Type</td>
-<td>One of: applicationTransaction, commitmentTransaction, disbursementTransaction</td>
+<td>One of: disbursementTransaction, applicationTransaction, commitmentTransaction</td>
 <td>Reference</td>
+</tr>
+<tr class='rowtype-text'>
+<td>provider.id</td>
+<td>Provider:Identifier</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>recipient.id</td>
+<td>Recipient:Identifier</td>
+<td>-</td>
+<td>Text</td>
 </tr>
 <tr class='rowtype-datetime'>
 <td>transactionDate</td>
@@ -772,18 +903,6 @@
                 </thead>
                 <tbody>
     
-<tr>
-<td>recipient</td>
-<td>Recipient</td>
-<td>-</td>
-<td> <a href='#Organization'>Organization (Organization)</a></td>
-</tr>
-<tr>
-<td>provider</td>
-<td>Provider</td>
-<td>-</td>
-<td> <a href='#Organization'>Organization (Organization)</a></td>
-</tr>
 </tbody></table></div>
        </div>
        </div>
