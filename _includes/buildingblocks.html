@@ -133,13 +133,25 @@
 <td>actualDates</td>
 <td>Actual dates</td>
 <td>-</td>
-<td> <a href='#Event'>Event (Event)</a></td>
+<td> <a href='#Event'>ActualDates (Event)</a></td>
+</tr>
+<tr>
+<td>applicationDate</td>
+<td>Application Date</td>
+<td>-</td>
+<td> <a href='#Event'>ApplicationDate (Event)</a></td>
+</tr>
+<tr>
+<td>awardDate</td>
+<td>Award Date</td>
+<td>-</td>
+<td> <a href='#Event'>AwardDate (Event)</a></td>
 </tr>
 <tr>
 <td>plannedDates</td>
 <td>Planned Dates</td>
 <td>-</td>
-<td> <a href='#Event'>Event (Event)</a></td>
+<td> <a href='#Event'>PlannedDates (Event)</a></td>
 </tr>
 <tr>
 <td>beneficiaryLocation</td>
@@ -231,20 +243,8 @@
 <tr class='rowtype-reference'>
 <td>relationshipType</td>
 <td>Relationship Type</td>
-<td>One of: classifications, gazeteerEntry, grantProgramme, documentCategory, fundingType, organisationType</td>
+<td>One of: gazeteerEntry, grantProgramme, classifications, documentCategory, fundingType, organisationType</td>
 <td>Reference</td>
-</tr>
-<tr class='rowtype-text'>
-<td>vocabulary</td>
-<td>Vocabulary</td>
-<td>-</td>
-<td>Text</td>
-</tr>
-<tr class='rowtype-text'>
-<td>code</td>
-<td>Code</td>
-<td>-</td>
-<td>Text</td>
 </tr>
 <tr class='rowtype-text'>
 <td>title</td>
@@ -253,8 +253,26 @@
 <td>Text</td>
 </tr>
 <tr class='rowtype-text'>
+<td>name</td>
+<td>Name</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>vocabulary</td>
+<td>Vocabulary</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
 <td>description</td>
 <td>Description</td>
+<td>-</td>
+<td>Text</td>
+</tr>
+<tr class='rowtype-text'>
+<td>code</td>
+<td>Code</td>
 <td>-</td>
 <td>Text</td>
 </tr>
@@ -321,6 +339,12 @@
 <td>Identifier</td>
 <td>-</td>
 <td>Text</td>
+</tr>
+<tr class='rowtype-reference'>
+<td>Event.id</td>
+<td>Event ID</td>
+<td>The identifier of a related Event (optional)</td>
+<td>Reference</td>
 </tr>
 <tr class='rowtype-reference'>
 <td>Results.id</td>
@@ -392,7 +416,7 @@
 <tr>
 <td>documentCategory</td>
 <td>Document Category</td>
-<td>By default document category codes are drawn from the IATI Document Category codelist available at http://iatistandard.org/codelists/document_category/ </td>
+<td>-</td>
 <td> <a href='#Classification'>Classification (Classification)</a></td>
 </tr>
 </tbody></table></div>
@@ -400,7 +424,7 @@
        </div>
 <h4 class='activity' id='Event'><span class='glyphicon glyphicon-th'></span> Event</h4>
 <p>An event is an occurence in the lifetime of an activity. This might be a start or end date, or some other key moment. </p>
-<p><strong>Types:</strong> Event</p>
+<p><strong>Types:</strong> ApplicationDate, AwardDate, PlannedDates, ActualDates</p>
 
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -431,7 +455,7 @@
 <tr class='rowtype-reference'>
 <td>relationshipType</td>
 <td>Relationship Type</td>
-<td>One of: actualDates, plannedDates</td>
+<td>One of: applicationDate, awardDate, plannedDates, actualDates</td>
 <td>Reference</td>
 </tr>
 <tr class='rowtype-text'>
@@ -443,19 +467,23 @@
 <tr class='rowtype-datetime'>
 <td>startDate</td>
 <td>Start Date</td>
-<td>-</td>
+<td>Dates should be in YYYY-MM-DD format. If only a month or day are not available, these may be omitted.
+
+The start date of an event. At a minimum events must have a start date. </td>
 <td>DateTime</td>
 </tr>
 <tr class='rowtype-text'>
 <td>duration</td>
 <td>Duration (months)</td>
-<td>-</td>
+<td>Events lasting more than one day should have either a duration (in days) or an end date.</td>
 <td>Text</td>
 </tr>
 <tr class='rowtype-datetime'>
 <td>endDate</td>
 <td>End Date</td>
-<td>-</td>
+<td>Dates should be in YYYY-MM-DD format. If only a month or day are not available, these may be omitted.
+
+Events lasting more than one day should have either a duration (in days) or an end date.</td>
 <td>DateTime</td>
 </tr>
 <tr class='rowtype-text'>
@@ -495,6 +523,12 @@
                 </thead>
                 <tbody>
     
+<tr>
+<td>relatedDocument</td>
+<td>Related Document</td>
+<td>-</td>
+<td> <a href='#Documents'>Document (Documents)</a></td>
+</tr>
 </tbody></table></div>
        </div>
        </div>
@@ -529,15 +563,15 @@
 <td>Text</td>
 </tr>
 <tr class='rowtype-reference'>
-<td>Activity.id</td>
-<td>Activity ID</td>
-<td>The identifier of a related Activity (optional)</td>
-<td>Reference</td>
-</tr>
-<tr class='rowtype-reference'>
 <td>Organization.id</td>
 <td>Organization ID</td>
 <td>The identifier of a related Organization (optional)</td>
+<td>Reference</td>
+</tr>
+<tr class='rowtype-reference'>
+<td>Activity.id</td>
+<td>Activity ID</td>
+<td>The identifier of a related Activity (optional)</td>
 <td>Reference</td>
 </tr>
 <tr class='rowtype-reference'>
@@ -612,7 +646,7 @@
        </div>
 <h4 class='activity' id='Organization'><span class='glyphicon glyphicon-th'></span> Organization</h4>
 <p>Organizations are involved in activities and transactions. Organizations can have contact details, descriptions, classifications and identifiers. </p>
-<p><strong>Types:</strong> FundingOrganization, RecipientOrganization</p>
+<p><strong>Types:</strong> RecipientOrganization, FundingOrganization</p>
 
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -655,7 +689,7 @@
 <tr class='rowtype-reference'>
 <td>relationshipType</td>
 <td>Relationship Type</td>
-<td>One of: fundingOrganization, recipientOrganization</td>
+<td>One of: recipientOrganization, fundingOrganization</td>
 <td>Reference</td>
 </tr>
 <tr class='rowtype-text'>
@@ -784,7 +818,7 @@
        </div>
 <h4 class='activity' id='Transaction'><span class='glyphicon glyphicon-th'></span> Transaction</h4>
 <p>A transactions may be attached to an activity, and have a date, type, currency and value. Transactions may be commitments to fund an activity, disbursements of funding, or any other kind of financial transaction. </p>
-<p><strong>Types:</strong> Commitment, Application, Disbursement</p>
+<p><strong>Types:</strong> Application, Disbursement, Commitment</p>
 
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -821,7 +855,7 @@
 <tr class='rowtype-reference'>
 <td>relationshipType</td>
 <td>Relationship Type</td>
-<td>One of: commitmentTransaction, applicationTransaction, disbursementTransaction</td>
+<td>One of: applicationTransaction, disbursementTransaction, commitmentTransaction</td>
 <td>Reference</td>
 </tr>
 <tr class='rowtype-datetime'>
@@ -887,13 +921,13 @@
     
 <tr>
 <td>recipient</td>
-<td>Recipient Org</td>
+<td>Recipient</td>
 <td>-</td>
 <td> <a href='#Organization'>Organization (Organization)</a></td>
 </tr>
 <tr>
 <td>provider</td>
-<td>Provider Org</td>
+<td>Provider</td>
 <td>-</td>
 <td> <a href='#Organization'>Organization (Organization)</a></td>
 </tr>
