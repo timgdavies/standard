@@ -878,7 +878,8 @@
           "type": "string",
           "description": "A globally unique identifier for this organisation. This is important to enable data on funders and recipients to be linked up across different grant-makers. The [Organisation Identifier Standard](http://www.threesixtygiving.org/standard/identifiers/#toc-organisation-identifier) guidance explains how to create this ID, based either on the known company or charity number, or upon identifiers held in the grant-maker's internal systems.",
           "weight": 0.001,
-          "title": "Identifier"
+          "title": "Identifier",
+          "examples": ["GB-COH-09506232", "GB-CHC-279417", "GB-GOVUK-2"]
         },
         "name": {
           "type": "string",
@@ -901,13 +902,15 @@
           "type": "string",
           "description": "Registered charity number, if applicable.",
           "weight": 6.01,
-          "title": "Charity Number"
+          "title": "Charity Number",
+          "examples": ["279417", "SC042386", "100019"]
         },
         "companyNumber": {
           "type": "string",
           "description": "Registered UK company number, if applicable.",
           "weight": 6.02,
-          "title": "Company Number"
+          "title": "Company Number",
+          "examples": ["09506232", "07444723"]
         },
         "streetAddress": {
           "type": "string",
