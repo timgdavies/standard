@@ -76,3 +76,101 @@ First we think that it's good practice to notify grantees of your intention to p
 **What are you going to say in your email to grantees?**
 
 Finally, you'll want to register your 360Giving Prefix with us. This allows your grants to be identified properly by including it when listing your grants. You can request your prefix by simply getting in touch and emailing [support@360giving.org](mailto:support@360giving.org) and letting us know the name of your organisation. We'll message you back with your prefix.
+
+## Prepare
+**What's involved in this phase?**
+By the end of this phase you will have prepared your actual data itself, ready for publishing by preparing a file and then checking that the file contains properly formatted 360Giving data. What this looks like for your organisation will depend mostly on what sort of systems you currently keep your data in and how you want the rest of the 360Giving community to interact with the data.
+
+**What are my tasks?**
++ Decide on a format and template to use, based on your needs
++ Prepare your data in this template through either exporting or compiling a file
++ Check that this file passes the tests in our data quality tool, so that it is compatible with 360Giving.
+
+The most involved step in this process will be preparing your data in the template, but this is relatively straightforward when you understand what this looks like.
+
+### Choosing a format or template
+There are two available formats for producing 360Giving data, a spreadsheet template and JSON. Most commonly, people choose to use the [spreadsheet template](http://standard.threesixtygiving.org/en/latest/_static/summary-table/360-giving-schema-titles.xlsx) because it is more straightforward and human-friendly for people who work in an organisation to compile and read. You might want to consider the spreadsheet format if:
+
++ You're familiar with spreadsheets
++ Your organisation stores grants in a system or database which you know exports reports or spreadsheets
++ Are comfortable cutting / pasting data between spreadsheets, or writing in spreadsheets
+
+The other option to consider is releasing in JSON format, following our [JSON Schema](360giving-json-schemas). This format is intended to be more machine readable and developer-friendly format. You might want to consider using the JSON format if:
+
++ You're familiar with JSON, databases, and (potentially) software or web development
++ You want to build your own interactive tools around the data and need a machine-readable format
++ You have a system or database which you know can be easily set up to export JSON
+
+Whichever you choose, the 360Giving team is here to help out. So again, [please get in touch](mailto:support@360giving.org) if you need a hand in making the decision.
+
+### Preparing the data
+The next step of this phase is to prepare the actual data file which contains the data you want to export. Generally, this can be achieved by taking information from your system and organising it into the 360Giving format you chose earlier. In a lot of cases, this is pretty straightforward to achieve automatically by generating reports from your system but can also be achieved manually if you already have spreadsheets that you want to cut and paste from. If you need support in getting your data out of your systems and into the 360Giving format please send an email to [support@360giving.org](mailto:support@360giving.org) letting us know what you'd like help with.
+
+> Are you a Community Foundation using Salesforce to manage your grants? If so, we have specific guidance on exporting information using the [D2 Plugin to Salesforce](https://www.threesixtygiving.org/communityfoundations/prepare/) which you should check out. There's handy videos and tutorials to help you.
+
+When preparing your 360Giving data it's worth noting that some, but not all, fields are required. Obviously we feel that the more fields you can fill in the better; but as discussed above there are many reasons for not including some fields. Take a look at the [reference](http://standard.threesixtygiving.org/en/latest/reference/) to see which fields are required and which are not.
+
+Remember when thinking about exporting data automatically or compiling the data to think about the scope and any privacy issues that we covered in the previous phase:
+
++ Based on what you might have decided to redact before, what filters can you set up to export only data you know that you can publish?
++ Based on the descriptions you give to things, do you need to tweak any entries to adjust for personal information and Data Protection?
+
+**Based on those questions, what extra tweaking are you going to do to make sure the data is ready to publish?**
+
+### Checking the data
+Now that you have a file or export ready to publish you should take steps to check the quality of the data. This is done by uploading the file to the [360Giving Data Quality Tool](https://dataquality.threesixtygiving.org).
+
+The Data Quality Tool will then provide you some feedback on your data in various ways:
+
++ **Data Summary** lets you sense-check that the data describes what you thought it would.
++ **Converted to JSON** lets you know whether the data could be successfully converted to the JSON format for use elsewhere and for checking quality.
++ **Valid against Schema** lets you know that you successfully produced valid 360Giving data, meaning that your data can be used by others.
++ **Additional Checks** is a section that seeks to make the data more useful and points out some things to you. The content of this section is just to allow you to sense-check that the data conforms to your expectations in more detailed ways. For example, the Data Quality Tool might flag that you've omitted some location information and explain why location data is useful; but you might have filtered it out deliberately.
+
+If the Data Quality Tool picks up on something you need to fix, you can see a [list of common mistakes](https://dataquality.threesixtygiving.org/common_errors) that people make and the solutions to fix them. If you need a hand unpicking what to do or you have an issue not covered there, feel free to fire us off an email at [support@360giving.org](mailto:support@360giving.org) letting us know what you'd like help with.
+
+Once you've run your data through the data quality tool and you're happy with it. You're ready to publish!
+
+## Publish
+**What's involved in this phase?**
+By the end of this phase youwill have taken the dataset that you curated and produced during the last phase and have published it on the web via your website. You will have also gotten in touch by email in order to send us the link to the file and, by doing so, linked your grants data to the 360Giving ecosystemand contributing to the open data around grantmaking.
+
+**What are my tasks?**
++ Decide on a license for your data
++ Upload your data file on your website
++ Register the link to your file with 360Giving sowe can include it in our registry
+
+### Deciding on a license for your data
+When producing open data it is very important to license it appropriately. Using an open license helps remove restrictions around letting others users and share the data and without one, data released is not technically open data.
+
+There are several options suitable for publishing 360Giving data, but we recommend one that acknowledges you the publisher without restricting the use of the data itself. To that end our default recommendation is the *Creative Commons Attribution 4.0 International*, also known as the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Under this license anyone can adapt and use your data for any purpose, even commercially. The license does require them to acknowledge your role in producing the data, link to the license and stateany changes they made when using the data.
+
++ Does the *CC BY 4.0** seem like an appropriate choice to you? If not, which alternatives are there?
++ Are you a UK public sector organisation? If so, you might want to use the [Open Government License](www.nationalarchives.gov.uk/doc/open-government-licence) under the recommendation of the *Re-USe of Public Sector Information Regulations Act 2015* ([RPSI](https://www.legislation.gov.uk/uksi/2015/1415/contents/made)) rather than the *CC BY 4.0*.
+
+### Uploading your data
+The next step to publishing your data is to upload it to your site. There are a few ways to do this, presuming you've got a file in either Excel, CSV, or JSON format.
+
+> If you're developing an interactive API then the data will likely be coming directly from your database and you probably won't need to upload anything. If you're unsure of what your next steps are at this point please [get in touch](mailto:support@360giving.org).
+
++ Do you use Wordpress to run your website? You can upload the file in the admin panel (`/wp-admin`) and using the *media* screen to upload the file. Wordpress will give you a link to the file.
++ Do you use Joomla to run your website? Similar to Wordpress, you can use your administrator dashboard (`/administrator`) and select *Content* and then select *Media Manager* to select your file. When you upload it, Joomla will give you a link to the file.
+
+Once you've got the file on your website we consdier it best practive to put a link to the file on a public-facing spot on your website. This could be a dedicated page or it could be part of an existing page on your site where appropriate. Wherever you put it; you should also tell people what it means and also indicate the license your data is released under by signposting this. We find that a statement similar to the following is very useful:
+
+> [Organisation] is committed to transparency and we work with 360Giving to publish information about our grants.
+>
+> Using the 360Giving data standard, our awarded grants since [Year] are available as [File Type] here.
+>
+> This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/. This means the data is freely accessible to anyone to be used and shared as they wish. The data must be attributed to [Organisation].
+>
+> We believe that with better information, grantmakers can be more effective and strategic decision makers. 360Giving provides support for grantmakers to publish their grants data openly, to understand their data, and to use the data to create online tools that make grant making more effective. For more information, visit http://www.threesixtygiving.org/
+
+**Where are you going to put your 360Giving data on your site? On a new page or part of an existing page?**
+
+### Register your open data with 360Giving
+The final stage in releasing your 360Giving data is to register the data file with us so that we can do the work of retrieving it, converting it, and sharing it with others.
+
+You'll need the link to the data file from the previous step. When you have that [email us](mailto:support@360giving.org) with the link (if this is the first time you're emailing us please also let us know who you are as well!). Once we've verified that your file can be retrieved at the link you've sent us, you're all set. Thank you for publishing to 360Giving.
+
+You may have some questions leaving this process; we are happy to support and answer your queries on our helpdesk at [support@360giving.org](mailto:support@360giving.org).
