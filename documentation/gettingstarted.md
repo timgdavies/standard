@@ -29,7 +29,7 @@ These tasks are designed to act as a rough checklist to get you started. They ar
 + Get in touch to register your [360Giving Prefix](https://www.threesixtygiving.org/support/standard/register/)
 
 ### Deciding on the scope of your data
-The 360Standard itself has got [minimum requirements]() about each grant to ensure that data is useful. However you retain control over the *scope* of information that you want to share. You may want to only ublish information between a cetain time period (e.g. last financial year) or around a particular theme or grant strategy you have.
+The 360Standard itself has got [minimum requirements](#) about each grant to ensure that data is useful. However you retain control over the *scope* of information that you want to share. You may want to only ublish information between a cetain time period (e.g. last financial year) or around a particular theme or grant strategy you have.
 
 Your should write in your plan details of the scope of the data you want to publish. It's always easiest to scale up, so don't worry about releasing everything yet. Some good questions to ask yourself:
 
