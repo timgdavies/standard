@@ -2,7 +2,7 @@
 
 This page provides reference information on publishing to the 360Giving Data Standard and assumes some technical knowledge. If you are just getting started with the 360Giving data standard you may wish to consult the [Publish Your Data](http://www.threesixtygiving.org/data/publish-data/) pages on the 360Giving website.
 
-The standard is maintained using JSON Schema although it may be published in [other formats](templates-csv.md).
+The standard is defined and maintained using JSON Schema although publishers may use [other formats](templates-csv.md) to publish data to the standard.
 
 In this section you will find:
 
