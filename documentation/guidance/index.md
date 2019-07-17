@@ -1,4 +1,4 @@
-# Guidance
+# Guidance for Publishers
 This section contains additional guidance for implementing the 360Giving standard.
 
 ```eval_rst
@@ -7,4 +7,5 @@ This section contains additional guidance for implementing the 360Giving standar
 
    data-protection
    licensing
+   spreadsheets
 ```
