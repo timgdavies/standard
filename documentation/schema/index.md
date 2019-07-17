@@ -6,9 +6,9 @@ The 360Giving standard is defined by a [JSON Schema](http://json-schema.org/), w
 
 At the root of the data model is a 'grant'. Grants have a number of direct properties (e.g. Title, Description, Currency, Amount Awarded etc.) and then a number of related entities, including Organisations (Funder and Recipient), Locations (Recipient, Beneficiary), Classifications, Grant Programmes, and Transactions.
 
-The <a href="../../_static/360-giving-schema.json">360Giving Grant Schema</a> defines the structure of an individual 'grant' and the documentation from this is displayed below, or <a href="../../_static/docson/index.html#../../360-giving-schema.json">fullscreen here</a>.
+The <a href="../_static/360-giving-schema.json">360Giving Grant Schema</a> defines the structure of an individual 'grant' and the documentation from this is displayed below, or <a href="../_static/docson/index.html#../360-giving-schema.json">fullscreen here</a>.
 
-When exchanging data about a single grant or any number of grants, those grants need to be packaged into a single JSON file. The <a href="../../_static/360-giving-package-schema.json">360Giving Package  Schema</a> describes how grants are packaged into one file.
+When exchanging data about a single grant or any number of grants, those grants need to be packaged into a single JSON file. The <a href="../_static/360-giving-package-schema.json">360Giving Package  Schema</a> describes how grants are packaged into one file.
 
 In general, most publishers will initially only use a sub-set of the possible features of the standard, but it is designed to accommodate comprehensive data about all stages of a grant process: for a full 360-degree view.
 
@@ -17,7 +17,7 @@ In this section of the documentation you will find:
 * a reference for each section of the 360Giving Grant Schema which provides guidance for its use
 * a reference for each section of the 360Giving
 
-If you are a publisher looking for advice on using our spreadsheet template please consult our [guidance on spreadsheets](spreadsheets.md).
+If you are a publisher looking for advice on using our spreadsheet template please consult our [guidance on spreadsheets](../guidance/spreadsheets).
 
 ```eval_rst
 .. toctree::
