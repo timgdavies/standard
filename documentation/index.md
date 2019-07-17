@@ -44,6 +44,7 @@ You can also contact the 360Giving data support team with your questions and sug
    :maxdepth: 2
 
    schema/index
+   guidance/index
    data-protection
    licensing
    governance
