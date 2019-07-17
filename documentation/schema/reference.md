@@ -27,11 +27,6 @@ There are two main formats available for representing 360Giving data.
 
 The [360Giving Data Quality Tool](https://dataquality.threesixtygiving.org/) can be used to convert data between these formats, providing structured data for developers, and spreadsheet simplicity if you want to browse, sort and filter data on your desktop.
 
-## Spreadsheet format
-
-
-
-
 ## JSON format
 
 The 360Giving standard is defined by a [JSON Schema](http://json-schema.org/), which details the entities that can be described using the standard, and the properties it recognises.
