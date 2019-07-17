@@ -5,7 +5,7 @@ This section contains additional guidance for implementing the 360Giving standar
 .. toctree::
    :maxdepth: 2
 
+   spreadsheets
    data-protection
    licensing
-   spreadsheets
 ```
