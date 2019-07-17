@@ -64,7 +64,7 @@ If you have additional data to report that does not fit any of the columns provi
 #### Actual Dates
 
 ```eval_rst
-.. jsonschema-titles:: ../schema/360-giving-schema.json
+.. jsonschema-titles:: ../../schema/360-giving-schema.json
     :child: actualDates
 ```
 
