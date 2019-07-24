@@ -14,9 +14,7 @@ If you would like to read more about what metadata is and why it's useful some m
 ## Metadata in the 360Giving Standard
 The metadata in the 360Giving Standard is authoritative metadata that the publisher declares about *the file or dataset* (not the grant itself). In the schema, it sits in [package schema](../schema/package-schema) and is declared using the fields in the package schema (except for `grants` which is a list of grant data).
 
-```eval_rst
-.. jsonschema-title-fieldname-map:: ../../schema/360-giving-package-schema.json
-```
+
 
 
 ## How do I add metadata to my 360Giving data?
