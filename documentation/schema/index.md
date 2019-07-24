@@ -23,7 +23,6 @@ In this section of the documentation you will find: a reference for the 360Givin
 
    schema
    package-schema
-   reference
    identifiers
 
 ```
