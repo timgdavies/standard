@@ -2,7 +2,6 @@
 This page contains guidance on metadata in 360Giving. What it is, why it's important, and how you can add metadata to your new or existing 360Giving data.
 
 ## What is metadata and why should you publish it?
-* Data about data
 Metadata is data about data. If you've ever looked at the file size of a file on your computer you've used the data. Metadata is useful to assist humans and computers to build a picture of what the contents of a dataset are so they can make decisions about how to use it.
 
 In the context of the 360Giving standard; metadata allows publishers of 360Giving data to declare information about their data in a way that can be easily read by humans and machines. Declaring metadata helps people such as data users understand what is contained in your data. If people understand what is in your data then they'll be able to determine whether or not it fits their needs. These needs will likely be on criteria such as information about the grant e.g. the date range of grants in the file, whether beneficiary location is included etc. Further to this, publishers of 360Giving data may want to make sure that a data user understands some of the context around their data before they use it.
