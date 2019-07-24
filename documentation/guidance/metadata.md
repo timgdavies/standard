@@ -25,7 +25,7 @@ This will depend on how you are publishing your 360Giving data. If you are publi
 ### Adding metadata to an Excel (.xlsx) format spreadsheet
 You may add metadata to an Excel formatted spreadsheet by following these steps:
 
-1. Add a tab to the spreadsheet called `Meta` or `meta`.
+1. Add a tab to the spreadsheet called `Meta`.
 2. In the first column (usually 'A') put the names of the metadata fields you wish to include. You can find the names by looking at the `Title` of the field on the [package schema](../schema/package-schema) page.  For example for the `version` field you can write `title` or `title`. For some fields you may need to declare them as part of a larger object. For these use a colon in the name e.g. `Publisher:Name` for your publisher name and `Publisher:Website` for you website URL.
 3. In the second column (usually 'B') you should fill out these with the appropriate values. Some fields require different types of values such as URLs or dates. You should check what these are by checking the [package schema information](../schema/package-schema).
 4. You should check whether your file is valid by uploading it to the [Data Quality Tool](https://dataquality.threesixtygiving.org/). It will tell you if you need to make any changes to the metadata you've added before you publish the file.
