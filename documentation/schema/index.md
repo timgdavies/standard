@@ -14,10 +14,7 @@ When exchanging data about a single grant or any number of grants, those grants 
 
 In general, most publishers will initially only use a sub-set of the possible features of the standard, but it is designed to accommodate comprehensive data about all stages of a grant process: for a full 360-degree view.
 
-In this section of the documentation you will find:
-
-* a reference for each section of the 360Giving Grant Schema which provides guidance for its use
-* a reference for each section of the 360Giving
+In this section of the documentation you will find: a reference for the 360Giving Grant schema and its sections which provide some technical guidance on its use; and a reference for the 360Giving Grant Package schema which grants should be used to distribute grants and provides fields for adding metadata.
 
 
 ```eval_rst
