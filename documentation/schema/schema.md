@@ -6,3 +6,7 @@ The 360Giving Schema defines how a grant should be described in the standard. It
         data-schema="../../360-giving-schema.json">
 </script>
 </div>
+
+
+**TODO**
+Add buildingblock details (e.g. Organization, etc.) 
