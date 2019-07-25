@@ -33,6 +33,6 @@ You may add metadata to an Excel formatted spreadsheet by following these steps:
 
 Our updated <a href="../../_static/summary-table/360-giving-schema-titles.xlsx">360Giving Spreadsheet Template</a> contains a tab already made for metadata.
 
-## Adding metadata to a CSV (.csv) format spreadsheet
+### Adding metadata to a CSV (.csv) format spreadsheet
 
 > TODO finish this with details of the implementation once they're known and implemented in flatten-tool
