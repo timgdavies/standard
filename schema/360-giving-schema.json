@@ -322,8 +322,12 @@
         },
         "transactionDate": {
           "oneOf": [
-            {"format": "date-time"},
-            {"pattern":"^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"}
+            {
+              "format": "date-time"
+            },
+            {
+              "pattern": "^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"
+            }
           ],
           "type": "string",
           "description": "When did this transaction take place? The date should be written as YYYY-MM-DD, or in full date-time format.",
@@ -341,8 +345,12 @@
         },
         "valueDate": {
           "oneOf": [
-            {"format": "date-time"},
-            {"pattern":"^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"}
+            {
+              "format": "date-time"
+            },
+            {
+              "pattern": "^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"
+            }
           ],
           "type": [
             "string",
@@ -870,6 +878,178 @@
           "description": "When was the link between this grant and its grant programme last modified? A full date-time should be given. Usually this can be generated automatically by the software managing or exporting this data.",
           "weight": 25,
           "title": "Last Modified"
+        },
+        "keyCriteria": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Text describing the criteria that applicants must meet (this will often include 'What we will fund' and 'What we won't fund')",
+          "weight": 30,
+          "title": "Key Criteria"
+        },
+        "openCall": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "Yes",
+            "No"
+          ],
+          "title": "Open Call?",
+          "description": "Are unsolicited applications allowed? Values should be 'Yes' or 'No'"
+        },
+        "active": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "Yes",
+            "No"
+          ],
+          "title": "Active?",
+          "description": "Is the fund currently accepting applications?"
+        },
+        "startDate": {
+          "type": "string",
+          "oneOf": [
+            {
+              "format": "date-time"
+            },
+            {
+              "pattern": "^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"
+            }
+          ],
+          "title": "Start Date",
+          "description": "The date the programme was first set up. The date should be written as YYYY-MM-DD, or in full date-time format."
+        },
+        "endDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "oneOf": [
+            {
+              "format": "date-time"
+            },
+            {
+              "pattern": "^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"
+            }
+          ],
+          "title": "End Date",
+          "description": "The last date the fund accepted applications. The date should be written as YYYY-MM-DD, or in full date-time format."
+        },
+        "fundingRounds": {
+          "items": {
+            "$ref": "#/definitions/Event"
+          },
+          "type": [
+            "array",
+            "null"
+          ],
+          "title": "Funding rounds",
+          "description": "When the recipient organisation intends this activity to take place. A date range can include a start date and duration in months, or a start and end date."
+        },
+        "currency": {
+          "$ref": "#/definitions/currency"
+        },
+        "minAmountAwarded": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "The smallest amount that can be awarded.",
+          "title": "Minimum Amount Awarded"
+        },
+        "maxAmountAwarded": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "The largest amount that can be awarded.",
+          "title": "Maximum Amount Awarded"
+        },
+        "minPlannedDuration": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Minumum Project Duration",
+          "description": "Smallest length of time for projects"
+        },
+        "maxPlannedDuration": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Maximum Project Duration",
+          "description": "Longest length of time for projects"
+        },
+        "fundingType": {
+          "type": [
+            "array"
+          ],
+          "title": "Funding type",
+          "description": "A list of types of funding available through this fund.",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          }
+        },
+        "organisationType": {
+          "type": [
+            "array"
+          ],
+          "title": "Organisation type",
+          "description": "Types of organisations that are allowed to apply for the fund.",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          }
+        },
+        "eligibilityCriteria": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Eligibility Criteria",
+          "description": "List of criteria an applicant must meet to be eligible for the programme."
+        },
+        "restrictions": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Retrictions",
+          "description": "List of criteria an applicant must not meet to be eligible for the programme."
+        },
+        "allowedLocations": {
+          "items": {
+            "$ref": "#/definitions/Location"
+          },
+          "type": "array",
+          "description": "List of locations where funded activity can take place.",
+          "title": "Allowed locations"
+        },
+        "classifications": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "title": "Classifications",
+          "description": "Any classifications or tags for the programme.",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          }
+        },
+        "relatedDocument": {
+          "items": {
+            "$ref": "#/definitions/Documents"
+          },
+          "type": "array",
+          "description": "-",
+          "weight": 5,
+          "title": "Related Document"
         }
       }
     },
@@ -1011,16 +1191,21 @@
       "properties": {
         "title": {
           "type": "string",
-          "title":"Title",
+          "title": "Title",
           "description": "The title of this event",
-          "weight": 1.05,
-          "title": "Title"
+          "weight": 1.05
         },
         "startDate": {
           "oneOf": [
-            {"format": "date-time"},
-            {"pattern":"^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"},
-            {"pattern":"^[0-9]{4}(-(0[1-9]|1[012]))?$"}
+            {
+              "format": "date-time"
+            },
+            {
+              "pattern": "^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"
+            },
+            {
+              "pattern": "^[0-9]{4}(-(0[1-9]|1[012]))?$"
+            }
           ],
           "type": "string",
           "description": "All events should have a start date. Dates should be in YYYY-MM-DD or date-time format. If the month or day are not available, these may be omitted.",
@@ -1029,9 +1214,15 @@
         },
         "endDate": {
           "oneOf": [
-            {"format": "date-time"},
-            {"pattern":"^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"},
-            {"pattern":"^[0-9]{4}(-(0[1-9]|1[012]))?$"}
+            {
+              "format": "date-time"
+            },
+            {
+              "pattern": "^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"
+            },
+            {
+              "pattern": "^[0-9]{4}(-(0[1-9]|1[012]))?$"
+            }
           ],
           "type": "string",
           "description": "An end date for the grant. Dates should be in YYYY-MM-DD or date-time format. If the month or day are not available, these may be omitted.",
@@ -1095,26 +1286,30 @@
     },
     "amountAppliedFor": {
       "type": "number",
-      "description": "Total amount applied for in numbers (do not include commas or currency symbols such as \u00a3). If you have provided detailed transaction information on a separate table, this should equal the sum of all the application transactions for this grant.",
+      "description": "Total amount applied for in numbers (do not include commas or currency symbols such as £). If you have provided detailed transaction information on a separate table, this should equal the sum of all the application transactions for this grant.",
       "weight": 5.03,
       "title": "Amount Applied For"
     },
     "amountAwarded": {
       "type": "number",
-      "description": "Total amount awarded in numbers (do not include commas or currency symbols such as \u00a3). If you have provided detailed transaction information on a separate table, this should equal the sum of all the award transactions for this grant.",
+      "description": "Total amount awarded in numbers (do not include commas or currency symbols such as £). If you have provided detailed transaction information on a separate table, this should equal the sum of all the award transactions for this grant.",
       "weight": 5.04,
       "title": "Amount Awarded"
     },
     "amountDisbursed": {
       "type": "number",
-      "description": "Total amount disbursed (paid) to this grantee when this record was last updated (in numbers: do not include commas or currency symbols such as \u00a3)). If you have provided detailed transaction information on a separate table, this should equal the sum of all the disbursement transactions for this grant.",
+      "description": "Total amount disbursed (paid) to this grantee when this record was last updated (in numbers: do not include commas or currency symbols such as £)). If you have provided detailed transaction information on a separate table, this should equal the sum of all the disbursement transactions for this grant.",
       "weight": 5.04,
       "title": "Amount Disbursed"
     },
     "awardDate": {
       "oneOf": [
-            {"format": "date-time"},
-            {"pattern":"^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"}
+        {
+          "format": "date-time"
+        },
+        {
+          "pattern": "^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"
+        }
       ],
       "type": "string",
       "description": "When was the decision to award this grant made. The date should be written as YYYY-MM-DD, or in full date-time format.",
@@ -1135,7 +1330,7 @@
       "type": "array",
       "weight": 5.041,
       "title": "Planned Dates",
-      "description":"When the recipient organisation intends this activity to take place. A date range can include a start date and duration in months, or a start and end date.",
+      "description": "When the recipient organisation intends this activity to take place. A date range can include a start date and duration in months, or a start and end date.",
       "rollUp": [
         "startDate",
         "endDate",
@@ -1159,7 +1354,7 @@
       "type": "array",
       "weight": 5,
       "title": "Recipient Org",
-      "description":"Details of the recipient of this grant.",
+      "description": "Details of the recipient of this grant.",
       "rollUp": [
         "id",
         "name",
